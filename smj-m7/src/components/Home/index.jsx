@@ -104,7 +104,7 @@ const Home = () => {
                     className="flex-1"
                   >
                     <button className="w-full btn-product">
-                      Ver collar
+                      Ver detalles
                     </button>
                   </Link>
 

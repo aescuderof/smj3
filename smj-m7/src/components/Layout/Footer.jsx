@@ -67,7 +67,7 @@ const Footer = () => {
                             <ul className="mt-4 space-y-2 text-sm text-dust-grey-700">
                                 {section.links.map((link) => (
                                     <li key={link}>
-                                        <a className="transition hover:text-dust-grey-900" href="#">
+                                        <a className="transition hover:text-dust-grey-900" href="/en-construccion">
                                             {link}
                                         </a>
                                     </li>

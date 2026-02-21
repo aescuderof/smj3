@@ -68,7 +68,7 @@ const ProductList = () => {
           >
             <div className="flex w-full flex-col gap-3">
               <button className="w-full btn-product">
-                Ver collar
+                Ver detalles
               </button>
 
               <button

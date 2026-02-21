@@ -13,6 +13,7 @@ import Profile from "./components/Profile";
 import Checkout from "./components/Checkout";
 import SuccessPage from './components/SuccessPage';
 import CancelPage from './components/ErrorPage';
+import ComingSoon from "./components/ComingSoon";
 
 const Router = () => {
   return (
@@ -27,6 +28,7 @@ const Router = () => {
               <Route path="/registro" element={<Register />} />
               <Route path="/pago-exitoso" element={<SuccessPage />} />
               <Route path="/pago-cancelado" element={<CancelPage />} />
+              <Route path="/en-construccion" element={<ComingSoon />} />
 
               <Route
                 path="/iniciar-sesion"
