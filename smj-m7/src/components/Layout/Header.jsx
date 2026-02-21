@@ -111,7 +111,7 @@ export default function Header() {
                <Link to="/registro" className="btn-nav-secundario px-6 py-3 h-12 min-w-20 flex items-center gap-2">
                 Crear cuenta
               </Link>
-              <Link to="/login" className="btn-nav px-6 py-3 h-12 min-w-20 flex items-center gap-2">
+              <Link to="/iniciar-sesion" className="btn-nav px-6 py-3 h-12 min-w-20 flex items-center gap-2">
                 Iniciar sesión
               </Link>
             </>
