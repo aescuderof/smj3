@@ -76,3 +76,5 @@ app.use('/carts', cartRouter);
 app.listen(PORT, ()=> {
     console.log('El servidor esta corriendo en el puerto ' + PORT);
 })
+
+module.exports = app; // agrega esta línea
