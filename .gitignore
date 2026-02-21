@@ -1,0 +1,5 @@
+.env
+**/.env
+node_modules/
+**/node_modules/
+smj-m7/node_modules/
