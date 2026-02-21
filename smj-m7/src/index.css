@@ -1,29 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
 @import "tailwindcss";
+
+
+@theme {
+   --color-dust-grey-50: #f4f0f0;
+   --color-dust-grey-100: #e9e2e2;
+   --color-dust-grey-200: #d3c5c5;
+   --color-dust-grey-300: #bda8a8;
+   --color-dust-grey-400: #a78b8b;
+   --color-dust-grey-500: #916e6e;
+   --color-dust-grey-600: #745858;
+   --color-dust-grey-700: #574242;
+   --color-dust-grey-800: #3a2c2c;
+   --color-dust-grey-900: #1d1616;
+   --color-dust-grey-950: #140f0f;
+}
 
 @layer components {
     .btn-product {
-        @apply px-8 py-4 text-center font-medium text-white bg-black w-full;
+               @apply mt-auto rounded-xl border border-dust-grey-400 px-4 py-3 text-sm font-medium text-dust-grey-800 transition hover:bg-dust-grey-400 hover:text-dust-grey-50;
     }
 
     .btn-nav {
-        @apply bg-black px-4 py-2 font-medium text-white ml-4 lg:px-4;
+          @apply ml-4 rounded-lg bg-dust-grey-500 px-4 py-2 font-medium text-dust-grey-50 transition hover:bg-dust-grey-800 lg:px-4;
     }
 
     .form-label {
-        @apply block text-sm;
+                  @apply block text-sm font-semibold text-dust-grey-900;
+
     }
 
     .form-input {
-        @apply block w-full mt-1 px-4 py-2 border font-light focus:outline-none focus:border-gray-500 sm:text-sm;
+            @apply block w-full rounded-md bg-white px-3.5 py-2 text-base text-dust-grey-900 outline-1 -outline-offset-1 outline-dust-grey-300 placeholder:text-dust-grey-400 focus:outline-2 focus:-outline-offset-2 focus:outline-dust-grey-500;
     }
 
     .form-button {
-        @apply w-full flex justify-center py-2 px-4 text-sm font-medium text-white bg-black;
-    }
+            @apply block w-full rounded-md bg-dust-grey-700 px-3.5 py-2.5 text-center text-sm font-semibold text-dust-grey-50 transition hover:bg-dust-grey-800 disabled:cursor-not-allowed disabled:opacity-70;
+   }
 
-    .btn-cart {
-        @apply ml-4 flex items-center;
-    }
+   .btn-cart {
+            @apply rounded-lg bg-dust-grey-500 px-4 py-2 font-medium text-dust-grey-50 transition hover:bg-dust-grey-800 lg:px-4;
+   }
 
     .btn-cart-quantity {
         @apply ml-2 text-sm font-medium;
@@ -32,4 +50,16 @@
     .checkout-figure-img {
         @apply w-24 h-24 rounded-lg object-center object-cover sm:w-32 sm:h-32;
   }
+
+   .titles {
+            @apply text-4xl font-semibold tracking-tight text-dust-grey-700 sm:text-5xl mx-auto max-w-2xl text-center; 
+   }
+     .form-textarea {
+            @apply block w-full rounded-md bg-white px-3.5 py-2 text-base text-dust-grey-900 outline-1 -outline-offset-1 outline-dust-grey-300 placeholder:text-dust-grey-400 focus:outline-2 focus:-outline-offset-2 focus:outline-dust-grey-500;
+   }
+
+     body {
+      @apply bg-dust-grey-50 text-dust-grey-900;
+      font-family: 'Google Sans', sans-serif;
+   }
 }
