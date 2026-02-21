@@ -83,25 +83,27 @@ const SingleProduct = () => {
               <label className="block mb-2 font-medium text-gray-700">
                 Cantidad
               </label>
-              <select
-                className="w-32 border border-gray-300 rounded-md p-2"
-                value={quantity}
-                onChange={handleChange}
-              >
-                {quantityOptions.map((q) => (
-                  <option key={q} value={q}>
-                    {q}
-                  </option>
-                ))}
-              </select>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
+                <select
+                  className="w-full rounded-md border border-gray-300 p-2 sm:w-32"
+                  value={quantity}
+                  onChange={handleChange}
+                >
+                  {quantityOptions.map((q) => (
+                    <option key={q} value={q}>
+                      {q}
+                    </option>
+                  ))}
+                </select>
 
-              <button
-                type="submit"
-                className="btn-product mt-6"
-                disabled={quantity === 0}
-              >
-                {cart.length ? "Modificar carrito" : "Agregar al carrito"}
-              </button>
+                <button
+                  type="submit"
+                  className="btn-product w-full sm:flex-1"
+                  disabled={quantity === 0}
+                >
+                  {cart.length ? "Modificar carrito" : "Agregar al carrito"}
+                </button>
+              </div>
             </form>
           )}
 

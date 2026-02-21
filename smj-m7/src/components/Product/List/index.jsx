@@ -64,15 +64,16 @@ const ProductList = () => {
           <Link
             to={`/products/${product.slug}`}
             state={{ product }}
-            className="mt-4"
+            className="mt-4 w-full"
           >
-            <button className="w-full btn-product mb-5">
-              Ver collar
-            </button>
+            <div className="flex w-full flex-col gap-3">
+              <button className="w-full btn-product">
+                Ver collar
+              </button>
 
-            <button
+              <button
                 type="button"
-                className="w-full btn-product-secundario mb-5"
+                className="w-full btn-product-secundario"
                 onClick={() => {
                   // Crear item para el carrito
                     const item = {
@@ -108,6 +109,7 @@ const ProductList = () => {
               >
                 Añadir al carrito
               </button>
+            </div>
           </Link>
         </div>
       );
