@@ -83,7 +83,7 @@ export default function Checkout() {
                         <h3 className="text-sm">{e.name}</h3>
                       </div>
 
-                      <p className="text-sm font-medium text-gray-900 text-right">
+                      <p className="text-sm font-medium text-dust-grey-900 text-right">
                         {formatCLP(e.price * e.quantity)}
                       </p>
                     </div>

@@ -1,11 +1,24 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { formatCLP } from "../../../utils/formatCLP";
-import UserContext from "../../../contexts/user/UserContext";
-import ProductContext from "../../../contexts/product/ProductContext";
+import UserContext from "../../../contexts/User/UserContext";
+import ProductContext from "../../../contexts/Product/ProductContext";
 import { useContext, useEffect, useState } from "react";
+
+const defaultDetails = [
+  "Piedras naturales seleccionadas a mano",
+  "Broches de bronce bañado en oro o plata",
+  "Diseño hecho a mano en Chile",
+];
+
+const defaultCareInfo =
+  "Evita el contacto directo con perfumes, agua y cremas. Guárdalo en su bolsa de tela para conservar el brillo.";
+
+const defaultShippingInfo =
+  "Realizamos envíos a todo Chile mediante courier privado. El tiempo estimado de entrega es de 3 a 5 días hábiles.";
 
 const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
   const location = useLocation();
   const { product } = location?.state;
 
@@ -64,6 +77,9 @@ const SingleProduct = () => {
 
   if (!product) return null;
   const { name, description, img, price } = product;
+  const detailItems = product.detalles || defaultDetails;
+  const careInfo = product.cuidados || defaultCareInfo;
+  const shippingInfo = product.envio || defaultShippingInfo;
   const quantityOptions = [0, 1, 2, 3, 4, 5];
 
   return (
@@ -71,34 +87,34 @@ const SingleProduct = () => {
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Info */}
         <section>
-          <h1 className="text-4xl font-bold">{name}</h1>
-          <p className="text-gray-600 mt-4">{description}</p>
-          <p className="mt-4 text-xl font-semibold">
-            Precio: {formatCLP(price)}
+          <h1 className="titles">{name}</h1>
+          <p className="text-dust-grey-600 mt-4">{description}</p>
+          <p className="mt-4 text-xl font-semibold text-dust-grey-800">
+          {formatCLP(price)}
           </p>
 
           {/* Select cantidad */}
           {authStatus && (
             <form onSubmit={handleSubmit} className="mt-8">
-              <label className="block mb-2 font-medium text-gray-700">
+              <label className="block mb-2 font-medium text-dust-grey-500">
                 Cantidad
               </label>
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
-                <select
-                  className="w-full rounded-md border border-gray-300 p-2 sm:w-32"
-                  value={quantity}
-                  onChange={handleChange}
-                >
-                  {quantityOptions.map((q) => (
-                    <option key={q} value={q}>
-                      {q}
-                    </option>
-                  ))}
-                </select>
+              <select
+                className="w-32 border border-gray-300 rounded-md p-2"
+                value={quantity}
+                onChange={handleChange}
+              >
+                {quantityOptions.map((q) => (
+                  <option key={q} value={q}>
+                    {q}
+                  </option>
+                ))}
+              </select>
 
+              <div className="mt-6 max-w-xs">
                 <button
                   type="submit"
-                  className="btn-product w-full sm:flex-1"
+                  className="btn-product-secundario w-full"
                   disabled={quantity === 0}
                 >
                   {cart.length ? "Modificar carrito" : "Agregar al carrito"}
@@ -114,6 +130,27 @@ const SingleProduct = () => {
               </button>
             </Link>
           )}
+
+          <div className="mt-12 space-y-8 border-t border-gray-200 pt-8 text-sm text-dust-grey-700">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-dust-grey-500">Detalles</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                {detailItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-dust-grey-500">Cuidados</p>
+              <p className="mt-3 leading-relaxed">{careInfo}</p>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-dust-grey-500">Envíos</p>
+              <p className="mt-3 leading-relaxed">{shippingInfo}</p>
+            </div>
+          </div>
         </section>
 
         {/* Imagen */}
