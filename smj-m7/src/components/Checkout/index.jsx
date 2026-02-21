@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import UserContext from "../../contexts/user/UserContext";
+import UserContext from "../../contexts/User/UserContext";
 import { formatCLP } from "../../utils/formatCLP";
 
 export default function Checkout() {
