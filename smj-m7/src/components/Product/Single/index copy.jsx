@@ -196,7 +196,7 @@ const SingleProduct = () => {
         </section>
 
         <figure className="flex items-start justify-center">
-          <div className="aspect-[3/4] w-full max-w-md overflow-hidden rounded-3xl border border-dust-grey-200 shadow-lg">
+          <div className="aspect-3/4 w-full max-w-md overflow-hidden rounded-3xl border border-dust-grey-200 shadow-lg">
             <img
               src={displayImage}
               alt={displayDescription}

@@ -21,7 +21,7 @@ const ComingSoon = () => {
   ];
 
   return (
-    <section className="min-h-[75vh] w-full bg-gradient-to-b from-dust-grey-50 via-dust-grey-100 to-dust-grey-200 text-dust-grey-800">
+    <section className="min-h-[75vh] w-full bg-linear-to-b from-dust-grey-50 via-dust-grey-100 to-dust-grey-200 text-dust-grey-800">
       <div className="max-w-5xl mx-auto px-6 py-20 flex flex-col items-center text-center gap-10">
         <div className="space-y-4">
           <p className="uppercase tracking-[0.4em] text-sm text-dust-grey-500">
