@@ -27,9 +27,7 @@ const Home = () => {
 </p>
             
   <div className="flex flex-wrap items-center justify-center gap-3">
-    <a href="#" className="inline-flex items-center justify-center rounded-lg border border-dust-grey-400 px-5 py-3 text-base font-medium text-center text-dust-grey-400 transition hover:bg-dust-grey-100 focus:ring-4 focus:ring-dust-grey-200">
-                  Nueva colección
-              </a>
+    
 
     <Link to="/products" className="inline-flex items-center justify-center rounded-lg bg-dust-grey-400 px-5 py-3 text-base font-medium text-center text-dust-grey-50 transition hover:bg-dust-grey-800 focus:ring-4 focus:ring-dust-grey-300">
                   Tienda
@@ -37,9 +35,15 @@ const Home = () => {
         </Link>
   </div>
         </div>
-    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" />
-        </div>                
+    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex items-center justify-end">
+      <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl ">
+        <img
+          src="https://scontent.fscl38-1.fna.fbcdn.net/v/t39.30808-6/486637415_1075479534620809_3677224643258479080_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=BbgmMWo7KyMQ7kNvwFC2dbq&_nc_oc=AdkWbD9wixG-jQI662RB3Dgr-esRVy_CzaR-gwUxwX2l3SqERb4idKlIOqPoWKjkN8QyRjbFsHuFzPbKeiYMXM6m&_nc_zt=23&_nc_ht=scontent.fscl38-1.fna&_nc_gid=9lvlFhTB-GmBHPoV588CeA&oh=00_Afu9Htr7AHUK_YoqOGO5irzJZ-WU9P2QP3lc9PIm__bI5Q&oe=699FA036"
+          alt="collar con coral"
+          className="h-full w-full object-cover"
+        />
+      </div>
+    </div>                
     </div>
 </section>
 
