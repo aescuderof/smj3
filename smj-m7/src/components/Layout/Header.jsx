@@ -129,7 +129,7 @@ export default function Header() {
               </Link>
               <Link
                 to="/iniciar-sesion"
-                className="btn-nav px-6 py-3 h-12 min-w-20 flex items-center justify-center gap-2 w-full"
+                className="btn-nav px-6 py-3 h-12 min-w-40 flex items-center justify-center gap-2 w-full"
                 onClick={closeMenu}
               >
                 Iniciar sesión
