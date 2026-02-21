@@ -56,10 +56,22 @@ export default function Header() {
           </li>
         </ul>
 
-        <section className="flex items-center justify-end">
+        <section className="flex items-center justify-end gap-4">
           {authStatus ? (
             <>
-              <Link to="/perfil" className="btn-nav">
+              <Link to="/perfil" className="px-6 py-3 h-12 min-w-20 flex items-center gap-2">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="#A3A3A3"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20c0-3.313 3.134-6 8-6s8 2.687 8 6" />
+                </svg>
                 Perfil
               </Link>
 
