@@ -23,7 +23,7 @@
     }
 
     .btn-nav {
-          @apply ml-4 rounded-lg bg-dust-grey-500 px-4 py-2 font-medium text-dust-grey-50 transition hover:bg-dust-grey-800 lg:px-4 px-6 py-3 h-12 min-w-20 flex items-center gap-2;
+          @apply ml-4 rounded-lg bg-dust-grey-500 font-medium text-dust-grey-50 transition hover:bg-dust-grey-800 lg:px-4 px-6 py-3 h-12 min-w-20 flex items-center gap-2;
     }
 
     .form-label {
@@ -62,4 +62,7 @@
       @apply bg-dust-grey-50 text-dust-grey-900;
       font-family: 'Google Sans', sans-serif;
    }
+   .btn-product-secundario {
+               @apply mt-auto rounded-xl bg-dust-grey-200 px-4 py-3 text-sm font-medium text-dust-grey-900 transition hover:bg-dust-grey-400  hover:text-dust-grey-50;
+  }
 }

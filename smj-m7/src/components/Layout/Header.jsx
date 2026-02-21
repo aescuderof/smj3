@@ -75,7 +75,8 @@ export default function Header() {
                 Perfil
               </Link>
 
-              <Link to="/" className="btn-nav" onClick={logout}>
+              <Link to="/"                 className="px-6 py-3 h-12 min-w-20 flex items-center gap-2"
+ onClick={logout}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -90,9 +91,10 @@ export default function Header() {
                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                   />
                 </svg>
+                Cerrar sesión
               </Link>
 
-              <Link to="/carrito" className="btn-cart">
+              <Link to="/carrito" className="px-6 py-3 h-12 min-w-20 flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -106,10 +108,10 @@ export default function Header() {
             </>
           ) : (
             <>
-              <Link to="/registro" className="btn-nav">
+               <Link to="/registro" className="btn-nav-secundario px-6 py-3 h-12 min-w-20 flex items-center gap-2">
                 Crear cuenta
               </Link>
-              <Link to="/iniciar-sesion" className="btn-nav">
+              <Link to="/login" className="btn-nav px-6 py-3 h-12 min-w-20 flex items-center gap-2">
                 Iniciar sesión
               </Link>
             </>
