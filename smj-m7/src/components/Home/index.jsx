@@ -79,7 +79,7 @@ const Home = () => {
                 <div className="relative overflow-hidden rounded-xl aspect-square mb-4">
                   <img
                     src={productImage}
-                    alt={product.nombre}
+                    alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                   />
                   

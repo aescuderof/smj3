@@ -37,7 +37,7 @@ const ProductList = () => {
               <div className="aspect-4/3 w-full bg-dust-grey-50">
                 <img
                   src={productImage}
-                  alt={product.descripcion}
+                  alt={product.description}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
               </div>
@@ -47,7 +47,7 @@ const ProductList = () => {
 
               
               <div className="absolute bottom-3 right-3 rounded-xl bg-dust-grey-800/55 px-3 py-2 text-sm font-semibold text-white backdrop-blur">
-                ${product.precio}
+                ${product.price}
               </div>
             </Link>
           </div>
@@ -55,7 +55,7 @@ const ProductList = () => {
          
           <div className="mt-4">
             <p className="text-sm font-semibold text-dust-grey-800">
-              {product.nombre}
+              {product.name}
             </p>
             
           </div>
@@ -77,9 +77,9 @@ const ProductList = () => {
                   // Crear item para el carrito
                     const item = {
                       priceID: product.priceID || product._id,
-                      name: product.nombre || product.name,
+                      name: product.name || product.name,
                       quantity: 1,
-                      price: product.precio || product.price,
+                      price: product.price || product.price,
                       image: product.images?.[0] || product.img,
                       slug: product.slug,
                     };
