@@ -37,8 +37,21 @@ export default function Header() {
       <nav className="flex items-center justify-between px-8 py-6 border-b border-gray-50">
         <ul className="flex items-center gap-8">
           <li className="ml-10 flex items-center gap-3 text-xl font-semibold text-dust-grey-900">
-            <Link to="/products" className="font-medium">
-              Products
+            <Link to="/" className="font-medium">
+                <span>Señorita María Joyas</span>
+            </Link>
+
+            <Link
+              to="/"
+              className="text-lg font-light text-dust-grey-700 transition hover:text-dust-grey-500"
+            >
+              Inicio
+            </Link>
+            <Link
+              to="/products"
+              className="text-lg font-light text-dust-grey-700 transition hover:text-dust-grey-500"
+            >
+              Tienda
             </Link>
           </li>
         </ul>
