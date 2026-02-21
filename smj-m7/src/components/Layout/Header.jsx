@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
  <header className="relative z-50 bg-dust-grey-50">
-      <nav className="flex items-center justify-between px-8 py-6 border-b border-gray-50">
+      <nav className="flex items-center justify-between px-8 py-6 border-b border-dust-grey-50">
         <ul className="flex items-center gap-8">
           <li className="ml-10 flex items-center gap-3 text-xl font-semibold text-dust-grey-900">
             <Link to="/" className="font-medium">

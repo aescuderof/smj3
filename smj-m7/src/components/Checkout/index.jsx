@@ -96,7 +96,7 @@ export default function Checkout() {
                         onChange={(e) => {
                           handleChange(e);
                         }}
-                        className="block border border-gray-300 px-2 py-1 text-sm"
+                        className="block border border-dust-grey-300 px-2 py-1 text-sm"
                       >
                         {Array(5)
                           .fill(null)

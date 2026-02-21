@@ -59,10 +59,7 @@ export default function Profile() {
                 <div className="px-4">
                   <div>
                     <h2 className="text-3xl font-bold mt-8">Tu perfil</h2>
-                    <p className="mt-2 mb-8 text-sm">
-                      Recuerda que estás en un proyecto académico. No coloques
-                      información real. 😉
-                    </p>
+                   
                   </div>
 
                   <div className="mt-6 grid grid-cols-4 gap-6">

@@ -100,7 +100,7 @@ const SingleProduct = () => {
                 Cantidad
               </label>
               <select
-                className="w-32 border border-gray-300 rounded-md p-2"
+                className="w-32 border border-dust-grey-300 rounded-md p-2"
                 value={quantity}
                 onChange={handleChange}
               >
@@ -131,7 +131,7 @@ const SingleProduct = () => {
             </Link>
           )}
 
-          <div className="mt-12 space-y-8 border-t border-gray-200 pt-8 text-sm text-dust-grey-700">
+          <div className="mt-12 space-y-8 border-t border-dust-grey-200 pt-8 text-sm text-dust-grey-700">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-dust-grey-500">Detalles</p>
               <ul className="mt-3 list-disc space-y-2 pl-5">
