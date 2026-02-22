@@ -78,7 +78,7 @@ STRIPE_CANCEL_URL=http://localhost:5173/pago-cancelado
 #### Frontend (`smj-m7/.env`)
 
 ```env
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL=https://smj3-phat.vercel.app
 ```
 
 ### 3. Ejecutar los servidores

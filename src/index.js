@@ -14,26 +14,7 @@ const app = express();
 
 connectDB();
 
-// const whiteList = [
-//     'http:localhost:5000',
-//     'https:www.render.com/miapp'
-// ];
 
-// const corsOptions = {
-//     origin: function(origin, callback) {
-//         if (!origin) return callback(null, true);
-
-//         if(whiteList.includes(origin)) {
-//             callback(null, true);
-//         } else {
-//             callback(new Error('Not allowd by CORS'));
-//         }
-//     },
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     credentials: true
-// };
-// middleware
-//app.use(cors(corsOptions));
 app.use(cors());
 app.use(express.json());
 

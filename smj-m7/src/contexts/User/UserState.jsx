@@ -21,20 +21,20 @@ const UserState = (props) => {
     const [globalState, dispatch] = useReducer(UserReducer, initialState);
 
     const registerUser = async (form) => {
-        try {
-            const response = await axiosClient.post('/users/register', form);
-            console.log('respuesta del registro', response);
+  try {
+    const response = await axiosClient.post('/users/register', form);
+    console.log('respuesta del registro', response);
 
-            dispatch({
-                type: "REGISTRO_EXITOSO",
-                payload: response.data
-            })
-            return;
-        } catch (error) {
-            console.error(error);
-            return error.response.data.message;
-        }
-    }
+    dispatch({
+      type: "REGISTRO_EXITOSO",
+      payload: response.data
+    });
+    return true; 
+  } catch (error) {
+    console.error(error);
+    return error.response.data.message;
+  }
+};
 
     const loginUser = async (form) => {
         try {
