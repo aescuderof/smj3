@@ -75,7 +75,6 @@ const ProductList = () => {
                 type="button"
                 className="w-full btn-product-secundario"
                 onClick={() => {
-                  // Crear item para el carrito
                     const item = {
                       priceID: product.priceID || product._id,
                       name: product.name || product.name,
@@ -84,7 +83,6 @@ const ProductList = () => {
                       image: product.images?.[0] || product.img,
                       slug: product.slug,
                     };
-                  // Buscar si ya existe
                   const existingItemIndex = cart.findIndex(
                     (el) => el.priceID === item.priceID
                   );

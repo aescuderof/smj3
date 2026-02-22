@@ -1,4 +1,3 @@
-// ./src/routes/Auth.js
 
 import { useContext, useEffect } from "react";
 

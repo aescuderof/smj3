@@ -12,7 +12,6 @@ const Home = () => {
     }
   }, [products.length, getProducts]);
 
-	// Mostrar solo los últimos 4 productos
 	const latestProducts = products.slice(-4).reverse();
 	return (
 		<>

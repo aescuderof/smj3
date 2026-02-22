@@ -37,7 +37,7 @@ export default function Register() {
 
     const res = await registerUser(newUser);
     if (res) {
-      navigate("/iniciar-sesion"); // ✅ redirigir solo si fue exitoso
+      navigate("/iniciar-sesion");
     } else {
       return setErrorMsg("Hubo un error al registrar");
     }

@@ -29,7 +29,6 @@ const SingleProduct = () => {
 
   useEffect(() => {
     if (!product) {
-      // Si el usuario recarga la página y no hay data, redirigir
       navigate("/products");
       return;
     }
@@ -63,12 +62,10 @@ const SingleProduct = () => {
     let updatedCart;
 
     if (existingItemIndex !== -1) {
-      // Si ya existe, actualiza la cantidad
       updatedCart = cart.map((el, i) =>
         i === existingItemIndex ? { ...el, quantity: item.quantity } : el
       );
     } else {
-      // Si no existe, agrega el nuevo ítem
       updatedCart = [...cart, item];
     }
 

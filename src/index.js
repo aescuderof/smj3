@@ -26,36 +26,10 @@ app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/carts', cartRouter);
 
-// // Crear un endpoint para el usuario que permita obtener todos los usuarios de la base de datos.
-// app.get('/users', async (req, res) => {
-//     try {
-//         const users = await User.find({});
-//         return res.status(200).json({ users });
-//     } catch (error) {
-//         return res.status(500).json({
-//             message: 'Hubo un error al obtener los usuarios',
-//             error: error.message
-//         })
-//     }
-// })
 
-
-// // Crear un endpoint para el usuario que permita eliminar el usuario en la base de datos.
-// app.delete('/users/:id', async (req, res) => {
-//     try {
-//         const deletedUser = await User.findByIdAndDelete(req.params.id);
-//         if (!deletedUser) return res.status(404).json({ message: 'Usuario no encontrado' });
-//         return res.status(200).json({ message: 'El usuario se elimino correctamente' });
-//     } catch (error) {
-//         return res.status(500).json({
-//             message: 'Hubo un error al eliminar el usuario',
-//             error: error.message
-//         })
-//     }
-// })
 
 app.listen(PORT, ()=> {
     console.log('El servidor esta corriendo en el puerto ' + PORT);
 })
 
-module.exports = app; // agrega esta línea
+module.exports = app; 
